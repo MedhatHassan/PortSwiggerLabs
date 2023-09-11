@@ -1,0 +1,4 @@
+Horizontal Privilege escalation vulnerability 
+Changing the id value in the URL prameter
+https://0ac5006c03cc4b1585802c99009b0025.web-security-academy.net/my-account?id=carlos
+Gs4cJ2TB9oWGiPrZh0UA1TWjed7MPyLR

