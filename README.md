@@ -34,7 +34,7 @@ We welcome contributions from the community to enhance and expand the PortSwigge
 ## Prerequisites
 
 Before you get started with the PortSwigger Labs, please make sure you have the following prerequisites:
-
+- Understanding of burp suite and how to use it.
 - A basic understanding of web development concepts.
 - A web browser for accessing the labs.
 - Any additional requirements specific to individual labs will be mentioned in their respective documentation.
@@ -42,11 +42,12 @@ Before you get started with the PortSwigger Labs, please make sure you have the 
 ## Installation
 
 The PortSwigger Labs are designed to be accessible directly from your web browser. You do not need to install any software or tools locally. Simply visit the lab links provided in the documentation and start learning.
+You only need to install burp suite and configure it with your browser to solve the labs.
 
 ## Usage
 
 1. Browse the lab categories in this repository to find a topic of interest.
-2. Open the lab's README to read about the specific vulnerability or security concept it covers.
+2. Open the lab's Description on portswiger to read about the specific vulnerability or security concept it covers.
 3. Follow the step-by-step guide provided in the lab's README to complete the lab and gain practical experience.
 4. Feel free to explore and experiment with the labs to deepen your understanding of web security.
 
