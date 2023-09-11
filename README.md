@@ -1,4 +1,3 @@
-# PortSwiggerLabs
 # PortSwigger Labs Repository
 
 ![PortSwigger Labs Logo](https://www.qbssoftware.com/image/cache/catalog/Vendor%20Logos/PORTSWIGGE-600x315w.png)
