@@ -30,15 +30,15 @@ The PortSwigger Labs Repository is designed to provide hands-on experience with 
 
 ## Content
 - [Access Control vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/AccessControl)
-- [Authentication attacks](#description)
-- [Buainess logic vulnerabilities](#features)
-- [CSRF vulnerabilities](#Content)
-- [Command Injection vulnerabilities](#prerequisites)
-- [File upload vulnerabilities](#installation)
-- [Information Disclosure vulnerabilities](#usage)
-- [SSRF vulnerabilities](#license)
-- [XSS vulnerabilities](#acknowledgements)
-- [XXE vulnerabilities](#license)
+- [Authentication attacks](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/Authentication)
+- [Buainess logic vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/BusinessLogicVulnerabilities)
+- [CSRF vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/CSRF)
+- [Command Injection vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/CommandInjection)
+- [File upload vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/FileUploadVulnerabilities)
+- [Information Disclosure vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/InformationDisclosure)
+- [SSRF vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/SSRF)
+- [XSS vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/XSS)
+- [XXE vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/XXE)
 
 ## Prerequisites
 
