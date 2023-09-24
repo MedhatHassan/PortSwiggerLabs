@@ -29,7 +29,7 @@ The PortSwigger Labs Repository is designed to provide hands-on experience with 
 - **Useful Resources:** We've curated additional resources and references related to web security testing, ensuring you have access to a wealth of information.
 
 ## Content
-We welcome contributions from the community to enhance and expand the PortSwigger Labs Repository. If you have new labs, improvements, or corrections to existing content, please submit a pull request. Be sure to review our [Contribution Guidelines](CONTRIBUTING.md) for details on how to contribute.
+We welcome contributions from the community to enhance and expand the PortSwigger Labs Repository. If you have new labs, improvements, or corrections to existing content, please submit a pull request.
 
 ## Prerequisites
 
