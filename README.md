@@ -26,7 +26,7 @@ The PortSwigger Labs Repository is designed to provide hands-on experience with 
 
 - **Step-by-Step Guides:** Detailed step-by-step guides are provided for each lab, ensuring that you can easily follow along and learn at your own pace.
 
-- ** Scripts and codes:** for some labs to automate the exploitation proccess. 
+- ** Scripts and codes:** for some labs to automate the exploitation process.
 
 - **Useful Resources:** We've curated additional resources and references related to web security testing, ensuring you have access to a wealth of information.
 
@@ -49,6 +49,7 @@ Before you get started with the PortSwigger Labs, please make sure you have the 
 - Understanding of burp suite and how to use it.
 - A basic understanding of web development concepts.
 - A web browser for accessing the labs.
+- A basic understanding of python and programming concepts.
 - Any additional requirements specific to individual labs will be mentioned in their respective documentation.
 
 ## Installation
