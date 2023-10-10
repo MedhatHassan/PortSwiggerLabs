@@ -6,7 +6,7 @@
 - [Introduction](#introduction)
 - [Description](#description)
 - [Features](#features)
-- [Content](#Content)
+- [Content](#content)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -26,6 +26,8 @@ The PortSwigger Labs Repository is designed to provide hands-on experience with 
 
 - **Step-by-Step Guides:** Detailed step-by-step guides are provided for each lab, ensuring that you can easily follow along and learn at your own pace.
 
+- ** Scripts and codes:** for some labs to automate the exploitation proccess. 
+
 - **Useful Resources:** We've curated additional resources and references related to web security testing, ensuring you have access to a wealth of information.
 
 ## Content
@@ -39,6 +41,7 @@ The PortSwigger Labs Repository is designed to provide hands-on experience with 
 - [SSRF vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/SSRF)
 - [XSS vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/XSS)
 - [XXE vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/XXE)
+- [SQL Injection vulnerabilities](https://github.com/MedhatHassan/PortSwiggerLabs/tree/main/SQLInjection)
 
 ## Prerequisites
 
